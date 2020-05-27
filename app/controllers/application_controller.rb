@@ -16,10 +16,10 @@ class App < Sinatra::Base
       params[:team][:members].each do |details|
         Member.new(details)
       end
-      @ships = Ship.all
+      @members = Member.all
 
-      erb :'pirates/show'
-    enderb :team
+      erb :team
+    end 
   end
 
 
